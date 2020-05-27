@@ -1,2 +1,5 @@
-# Avaj-launcher
-Implementing a java program according to a given class diagram written in UML.
+WINDOWS powershell:
+javac *.java
+java AvajLauncher .\scenarios\good_hashed_scenario.txt
+
+Get-ChildItem * -Include *.class -Recurse | Remove-Item
