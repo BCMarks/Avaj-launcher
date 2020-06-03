@@ -25,7 +25,6 @@ public class AvajLauncher {
                         int rounds;
                         if (data.get(0).length() > 10) {
                             notMD5 hasher = new notMD5();
-                            //limited to 10k
                             if (hasher.validSim(data.get(0)))
                                 rounds = hasher.getNumb(data.get(0));
                             else
@@ -44,17 +43,17 @@ public class AvajLauncher {
                                         if (!tmp[1].matches("\\w+"))
                                             error.append("Line "+(data.indexOf(line) + 2)+": Invalid name. Please use only alphanumeric characters and underscores.\n");
                                         if (!hasher.validSim(tmp[2]))
-                                            error.append("Line "+(data.indexOf(line) + 2)+": Invalid longitude value. Must be a positive integer.\n");
+                                            error.append("Line "+(data.indexOf(line) + 2)+": Invalid longitude value. Must be a positive integer less than 10001.\n");
                                         else {
                                             if (hasher.getNumb(tmp[2]) < 0)
-                                                error.append("Line "+(data.indexOf(line) + 2)+": Invalid longitude value. Must be a positive integer.\n");
+                                                error.append("Line "+(data.indexOf(line) + 2)+": Invalid longitude value. Must be a positive integer less than 10001.\n");
                                         }
 
                                         if (!hasher.validSim(tmp[3]))
-                                            error.append("Line "+(data.indexOf(line) + 2)+": Invalid latitude value. Must be a positive integer.\n");
+                                            error.append("Line "+(data.indexOf(line) + 2)+": Invalid latitude value. Must be a positive integer less than 10001.\n");
                                         else {
                                             if (hasher.getNumb(tmp[3]) < 0)
-                                                error.append("Line "+(data.indexOf(line) + 2)+": Invalid latitude value. Must be a positive integer.\n");
+                                                error.append("Line "+(data.indexOf(line) + 2)+": Invalid latitude value. Must be a positive integer less than 10001.\n");
                                         }
 
                                         if (!hasher.validSim(tmp[4]))

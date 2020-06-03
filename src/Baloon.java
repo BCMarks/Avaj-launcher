@@ -28,7 +28,7 @@ public class Baloon extends Aircraft implements Flyable{
             }
             Writer.newLine("Baloon#"+this.name+"("+this.id+"): I hate the "+weather);
             if (this.coordinates.getHeight() <= 0) {
-                Writer.newLine("Baloon#"+this.name+"("+this.id+") has landed. Longitude: "+this.coordinates.getLongitude()+" ,Latitude: "+this.coordinates.getLatitude());
+                Writer.newLine("Baloon#"+this.name+"("+this.id+") has landed. Longitude: "+this.coordinates.getLongitude()+", Latitude: "+this.coordinates.getLatitude());
                 this.weatherTower.unregister(this);
                 this.weatherTower = null;
                 Writer.newLine("Baloon#"+this.name+"("+this.id+") unregistered from weather tower.");
