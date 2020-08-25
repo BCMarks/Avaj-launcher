@@ -11,18 +11,18 @@ public class Helicopter extends Aircraft implements Flyable{
     public void updateConditions() {
         if (this.weatherTower != null) {
             String weather = this.weatherTower.getWeather(this.coordinates);
-            switch(weather){
+            switch (weather){
                 case "RAIN":
                     this.coordinates = new Coordinates(this.coordinates.getLongitude() + 5, this.coordinates.getLatitude(), this.coordinates.getHeight());
                     break;
                 case "FOG":
-                this.coordinates = new Coordinates(this.coordinates.getLongitude() + 1, this.coordinates.getLatitude(), this.coordinates.getHeight());
+                    this.coordinates = new Coordinates(this.coordinates.getLongitude() + 1, this.coordinates.getLatitude(), this.coordinates.getHeight());
                     break;
                 case "SUN":
-                this.coordinates = new Coordinates(this.coordinates.getLongitude() + 10, this.coordinates.getLatitude(), this.coordinates.getHeight() + 2);
+                    this.coordinates = new Coordinates(this.coordinates.getLongitude() + 10, this.coordinates.getLatitude(), this.coordinates.getHeight() + 2);
                     break;
                 case "SNOW":
-                this.coordinates = new Coordinates(this.coordinates.getLongitude(), this.coordinates.getLatitude(), this.coordinates.getHeight() - 12);
+                    this.coordinates = new Coordinates(this.coordinates.getLongitude(), this.coordinates.getLatitude(), this.coordinates.getHeight() - 12);
                     break;
                 default:
             }

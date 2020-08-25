@@ -9,7 +9,7 @@ public class AvajLauncher {
         CustomExceptions customExceptions = new CustomExceptions();
         StringBuilder error = new StringBuilder("ERROR: Invalid input.\n");
         try {
-            if(args.length != 1)
+            if (args.length != 1)
                 customExceptions.throwException("Usage: java AvajLauncher <filepath>");
             else {
                 try {
