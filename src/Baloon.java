@@ -31,7 +31,7 @@ public class Baloon extends Aircraft implements Flyable{
                 Writer.newLine("Baloon#"+this.name+"("+this.id+") has landed. Longitude: "+this.coordinates.getLongitude()+", Latitude: "+this.coordinates.getLatitude());
                 this.weatherTower.unregister(this);
                 this.weatherTower = null;
-                Writer.newLine("Baloon#"+this.name+"("+this.id+") unregistered from weather tower.");
+                Writer.newLine("Tower says: Baloon#"+this.name+"("+this.id+") unregistered from weather tower.");
             }
         }
     }
@@ -39,6 +39,6 @@ public class Baloon extends Aircraft implements Flyable{
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
         this.weatherTower.register(this);
-        Writer.newLine("Baloon#"+this.name+"("+this.id+") registered to weather tower.");
+        Writer.newLine("Tower says: Baloon#"+this.name+"("+this.id+") registered to weather tower.");
     }
 }

@@ -31,7 +31,7 @@ public class Helicopter extends Aircraft implements Flyable{
                 Writer.newLine("Helicopter#"+this.name+"("+this.id+") has landed. Longitude: "+this.coordinates.getLongitude()+", Latitude: "+this.coordinates.getLatitude());
                 this.weatherTower.unregister(this);
                 this.weatherTower = null;
-                Writer.newLine("Helicopter#"+this.name+"("+this.id+") unregistered from weather tower.");
+                Writer.newLine("Tower says: Helicopter#"+this.name+"("+this.id+") unregistered from weather tower.");
             }
         }
     }
@@ -39,6 +39,6 @@ public class Helicopter extends Aircraft implements Flyable{
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
         this.weatherTower.register(this);
-        Writer.newLine("Helicopter#"+this.name+"("+this.id+") registered to weather tower.");
+        Writer.newLine("Tower says: Helicopter#"+this.name+"("+this.id+") registered to weather tower.");
     }
 }
